@@ -403,6 +403,8 @@ function ActiveMeeting({
         },
       });
 
+      api.getIFrame().allow =
+        "camera; microphone; display-capture; autoplay; clipboard-write; fullscreen";
       api.addListener("audioMuteStatusChanged", (event) => {
         const payload = event as { muted?: boolean };
         setMicMuted(Boolean(payload.muted));

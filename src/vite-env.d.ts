@@ -10,5 +10,6 @@ interface Window {
 interface JitsiApi {
   addListener(event: string, listener: (...args: unknown[]) => void): void;
   executeCommand(command: string, ...args: unknown[]): void;
+  getIFrame(): HTMLIFrameElement;
   dispose(): void;
 }
